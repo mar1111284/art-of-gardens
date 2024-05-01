@@ -1,0 +1,147 @@
+.navbar-container
+    @include set-position(fixed,0,0)
+    @include width-height(100vw, 100vh)
+
+    // Blurred overlaying background
+    .background-layer
+        @include width-height(100vw, 100%)
+        @include set-position(fixed,0,0)
+        z-index: -1
+        background-color: rgba(230,230,255,0.92)
+        transition: all 0.8s ease
+        visibility: hidden
+        opacity: 0
+    .expand
+        visibility: visible
+        opacity: 1
+
+    // Navbar
+    .navbar
+        @include flexbox(column, flex-start, flex-start)
+        background-color: rgb(249, 246, 238)
+        box-shadow: 1px 8px 36px -6px rgba(0,0,0,0.25)
+        min-height: 9rem
+
+        .menu-btn
+            @include width-height(4rem, 4rem)
+            position: absolute
+            top: 2.25rem
+            right: 2.5rem
+
+
+        .navbar-title
+            @include set-font(darkGreen,Roboto, 2rem, Bold,normal )
+            margin: 3rem 2rem
+
+        .links-container
+            @include flexbox(column, space-between ,center)
+            width: 100%
+            padding-left: 2rem
+            height: 0
+            opacity: 0
+            transition: all 0.4s ease
+
+            .link
+                width: 100%
+                @include set-font(black,Roboto, 1.8rem, 300,normal )
+                height: 4rem
+                text-align: center
+        .expand
+            height: 20rem
+            opacity: 1
+
+@include respond(tablet)
+    .navbar-container
+        @include set-position(fixed,0,0)
+        @include width-height(100vw, 100vh)
+
+        // Blurred overlaying background
+        .background-layer
+            display: none
+
+        // Navbar
+        .navbar
+            @include flexbox(row, space-between,center)
+            background-color: rgb(249, 246, 238)
+            box-shadow: 1px 8px 36px -6px rgba(0,0,0,0.25)
+            height: 9rem
+            padding: 0 6%
+
+            .menu-btn
+                display: none
+
+            .navbar-title
+                @include set-font(darkGreen,Roboto, 2rem, Bold,normal )
+                margin: 3rem 2rem
+
+            .links-container
+                @include flexbox(row, center,center, 1rem)
+                @include width-height(100%,100%)
+                padding: 0
+                opacity: 1
+                width: auto
+
+                .link
+                    width: auto
+                    @include flexbox(row, center,center)
+                    @include set-font(black,Roboto, 1.8rem, 300,normal )
+                    height: 100%
+                    position: relative
+
+                    // Black selector line below selected Link
+                    .selector
+                        @include width-height(100%, 0.35rem)
+                        @include set-position(absolute, undefined, undefined,0,0)
+                        background-color: rgba(33,33,33, 0.7)
+                        display: none
+
+                    .selected
+                        display: block
+
+@include respond(desktop)
+    .navbar-container
+        @include set-position(fixed,0,0)
+        @include width-height(100vw, 100vh)
+
+        // Blurred overlaying background
+        .background-layer
+            display: none
+
+        // Navbar
+        .navbar
+            @include flexbox(row, space-between,center)
+            background-color: rgb(249, 246, 238)
+            box-shadow: 1px 8px 36px -6px rgba(0,0,0,0.25)
+            height: 9rem
+            padding: 0 6%
+
+            .menu-btn
+                display: none
+
+            .navbar-title
+                @include set-font(darkGreen,Roboto, 2rem, Bold,normal )
+                margin: 3rem 2rem
+
+            .links-container
+                @include flexbox(row, center,center, 1.5rem)
+                @include width-height(100%,100%)
+                padding: 0
+                opacity: 1
+                width: auto
+
+                .link
+                    width: auto
+                    @include flexbox(row, center,center)
+                    @include set-font(black,Roboto, 1.8rem, 300,normal )
+                    height: 100%
+                    position: relative
+
+                    // Black selector line below selected Link
+                    .selector
+                        @include width-height(100%, 0.35rem)
+                        @include set-position(absolute, undefined, undefined,0,0)
+                        background-color: rgba(33,33,33, 0.7)
+                        display: none
+
+                    .selected
+                        display: block

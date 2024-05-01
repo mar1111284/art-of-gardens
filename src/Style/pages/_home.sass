@@ -1,0 +1,10 @@
+.home-container
+    @include width-height(100vw,100%)
+    @include flexbox(column, flex-start,center)
+    min-height: 100vh
+
+    // Photo Header style
+    .home-header
+        @include width-height(100vw, 100vh)
+        @include set-background-image('../assets/shared/home2.jpg', top, cover)
+        // background-color: lightGray
