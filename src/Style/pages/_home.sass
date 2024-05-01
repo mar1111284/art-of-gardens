@@ -7,4 +7,48 @@
     .home-header
         @include width-height(100vw, 100vh)
         @include set-background-image('../assets/shared/home2.jpg', top, cover)
-        // background-color: lightGray
+        @include flexbox(column, center,center, 2rem)
+
+        .home-title
+            @include set-font(white,Roboto, 3rem, bold,normal )
+            max-width: 35rem
+            text-align: center
+        .home-subtitle
+            @include set-font(white,Roboto, 1.6rem, 300,normal )
+            max-width: 30rem
+            text-align: center
+
+        .learn-more
+            background-color: #fcc01e
+            @include set-font(white,Roboto, 1.6rem, bold,normal )
+            border-radius: 6px
+            padding: 1rem 1.5rem
+            cursor: pointer
+
+@include respond(desktop)
+    .home-container
+        @include width-height(100vw,100%)
+        @include flexbox(column, flex-start,center)
+        min-height: 100vh
+
+        // Photo Header style
+        .home-header
+            @include width-height(100vw, 100vh)
+            @include set-background-image('../assets/shared/home2.jpg', top, cover)
+            @include flexbox(column, center,center, 2rem)
+
+            .home-title
+                @include set-font(white,Roboto, 5rem, bold,normal )
+                max-width: 90rem
+                text-align: center
+            .home-subtitle
+                @include set-font(white,Roboto, 2rem, 300,normal )
+                max-width: 75rem
+                text-align: center
+
+            .learn-more
+                background-color: #fcc01e
+                @include set-font(white,Roboto, 2rem, 300,normal )
+                border-radius: 6px
+                padding: 1rem 1.5rem
+                cursor: pointer

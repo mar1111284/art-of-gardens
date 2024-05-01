@@ -1,33 +1,21 @@
 // Home.jsx
+import { Link } from "react-router-dom"
 
 const Home = () => {
 
     return (
         <div className='home-container'>
+
             <div className="home-header">
-                <p>This is the homepage</p>
+                <p className="home-title">We provide services in Nothern Sydney since 15 years</p>
+                <p className="home-subtitle">Landscaping design is much more than simply planting a few trees and shrubs around your property</p>
+                <Link className="learn-more">Learn more</Link>
             </div>
 
-            <div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus facilis dolorem dolores recusandae animi maiores quasi et nam in iste! Quia iusto eligendi maiores, quisquam architecto ex deleniti saepe provident!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus facilis dolorem dolores recusandae animi maiores quasi et nam in iste! Quia iusto eligendi maiores, quisquam architecto ex deleniti saepe provident!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus facilis dolorem dolores recusandae animi maiores quasi et nam in iste! Quia iusto eligendi maiores, quisquam architecto ex deleniti saepe provident!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus facilis dolorem dolores recusandae animi maiores quasi et nam in iste! Quia iusto eligendi maiores, quisquam architecto ex deleniti saepe provident!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus facilis dolorem dolores recusandae animi maiores quasi et nam in iste! Quia iusto eligendi maiores, quisquam architecto ex deleniti saepe provident!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus facilis dolorem dolores recusandae animi maiores quasi et nam in iste! Quia iusto eligendi maiores, quisquam architecto ex deleniti saepe provident!
-                </p>
+            <div className="home-description">
+                <img></img>
             </div>
+
         </div>
     )
   }

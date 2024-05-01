@@ -82,8 +82,95 @@ h2 {
   background-image: url("../assets/shared/home2.jpg");
   background-position: top;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.home-container .home-header .home-title {
+  color: white;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 3rem;
+  font-style: normal;
+  max-width: 35rem;
+  text-align: center;
+}
+.home-container .home-header .home-subtitle {
+  color: white;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1.6rem;
+  font-style: normal;
+  max-width: 30rem;
+  text-align: center;
+}
+.home-container .home-header .learn-more {
+  background-color: #fcc01e;
+  color: white;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 1.6rem;
+  font-style: normal;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
 }
 
+@media only screen and (min-width: 1025px) {
+  .home-container {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    min-height: 100vh;
+  }
+  .home-container .home-header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../assets/shared/home2.jpg");
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .home-container .home-header .home-title {
+    color: white;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 5rem;
+    font-style: normal;
+    max-width: 90rem;
+    text-align: center;
+  }
+  .home-container .home-header .home-subtitle {
+    color: white;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 2rem;
+    font-style: normal;
+    max-width: 75rem;
+    text-align: center;
+  }
+  .home-container .home-header .learn-more {
+    background-color: #fcc01e;
+    color: white;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 2rem;
+    font-style: normal;
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+  }
+}
 .navbar-container {
   position: fixed;
   top: 0;
@@ -262,7 +349,7 @@ h2 {
     background-color: rgb(249, 246, 238);
     box-shadow: 1px 8px 36px -6px rgba(0, 0, 0, 0.25);
     height: 9rem;
-    padding: 0 6%;
+    padding: 0 15%;
   }
   .navbar-container .navbar .menu-btn {
     display: none;
