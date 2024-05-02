@@ -14,13 +14,9 @@
 }
 
 html {
-  position: relative;
-  margin: 0;
-  padding: 0;
   font-size: 62.5%;
-  background-color: white;
   width: 100vw;
-  overflow-x: hidden;
+  height: 100vh;
 }
 
 body {
@@ -30,6 +26,7 @@ body {
   background-attachment: fixed;
   color: rgb(33, 33, 33);
   max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .link, a {
@@ -77,8 +74,9 @@ h2 {
   min-height: 100vh;
 }
 .home-container .home-header {
+  margin-top: 9rem;
   width: 100vw;
-  height: 100vh;
+  height: 60vh;
   background-image: url("../assets/shared/home2.jpg");
   background-position: top;
   background-size: cover;
@@ -96,28 +94,225 @@ h2 {
   font-style: normal;
   max-width: 35rem;
   text-align: center;
+  letter-spacing: 0.15rem;
 }
 .home-container .home-header .home-subtitle {
   color: white;
   font-family: Roboto;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.6rem;
   font-style: normal;
   max-width: 30rem;
   text-align: center;
+  letter-spacing: 0.2rem;
 }
 .home-container .home-header .learn-more {
-  background-color: #fcc01e;
+  background-color: #228B22;
   color: white;
   font-family: Roboto;
   font-weight: bold;
   font-size: 1.6rem;
   font-style: normal;
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 1rem 1.5rem;
   cursor: pointer;
+  letter-spacing: 0.2rem;
+}
+.home-container .home-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.home-container .home-description .description-image {
+  display: none;
+}
+.home-container .home-description .description-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+.home-container .home-description .description-text h2 {
+  color: #023020;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 2.2rem;
+  font-style: normal;
+  line-height: 3.2rem;
+}
+.home-container .home-description .description-text p {
+  color: #023020;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 2rem;
+  font-style: normal;
+  line-height: 2.8rem;
 }
 
+@media only screen and (min-width: 650px) and (max-width: 1025px) {
+  .home-container {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    min-height: 100vh;
+  }
+  .home-container .home-header {
+    margin-top: 9rem;
+    width: 100vw;
+    height: 45vh;
+    background-image: url("../assets/shared/home2.jpg");
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .home-container .home-header .home-title {
+    color: white;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 3.25rem;
+    font-style: normal;
+    max-width: 70rem;
+    text-align: center;
+    letter-spacing: 0.15rem;
+  }
+  .home-container .home-header .home-subtitle {
+    color: white;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: normal;
+    max-width: 55rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+  }
+  .home-container .home-header .learn-more {
+    background-color: #228B22;
+    color: white;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 2rem;
+    font-style: normal;
+    border-radius: 4px;
+    padding: 1.8rem 2.5rem;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+  }
+  .home-container .home-description {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+    padding: 5rem 20rem;
+  }
+  .home-container .home-description .description-image {
+    margin-bottom: 6rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+  }
+  .home-container .home-description .description-image .under {
+    width: 42rem;
+    grid-column: 2/span 8;
+    grid-row: 1;
+    padding-top: 20%;
+  }
+  .home-container .home-description .description-image .over {
+    width: 22rem;
+    grid-column: 8/-1;
+    grid-row: 1;
+    z-index: 1;
+  }
+  .home-container .home-description .description-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+  }
+  .home-container .home-description .description-text h2 {
+    color: #023020;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 2.2rem;
+    font-style: normal;
+    line-height: 3.2rem;
+  }
+  .home-container .home-description .description-text p {
+    color: #023020;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: normal;
+    line-height: 2.8rem;
+  }
+  .home-container .home-services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+  .home-container .home-services .service {
+    width: 50%;
+    height: 42rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 2rem;
+  }
+  .home-container .home-services .service h2 {
+    color: white;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 4rem;
+    font-style: normal;
+  }
+  .home-container .home-services .service p {
+    color: white;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: normal;
+    line-height: 3rem;
+    letter-spacing: 0.15rem;
+  }
+  .home-container .home-services #services-description {
+    background-image: url("../assets/shared/leaf-pattern.jpg");
+    background-position: top;
+    background-size: cover;
+  }
+  .home-container .home-services #services-1 {
+    background-image: url("../assets/shared/service1.jpg");
+    background-position: top;
+    background-size: cover;
+  }
+  .home-container .home-services #services-2 {
+    background-image: url("../assets/shared/service3.jpg");
+    background-position: top;
+    background-size: cover;
+  }
+  .home-container .home-services #services-3 {
+    background-image: url("../assets/shared/service2.jpg");
+    background-position: top;
+    background-size: cover;
+  }
+}
 @media only screen and (min-width: 1025px) {
   .home-container {
     width: 100vw;
@@ -139,7 +334,8 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 3.8rem;
+    padding-bottom: 20rem;
   }
   .home-container .home-header .home-title {
     color: white;
@@ -147,28 +343,93 @@ h2 {
     font-weight: bold;
     font-size: 5rem;
     font-style: normal;
-    max-width: 90rem;
+    max-width: 80rem;
     text-align: center;
+    letter-spacing: 0.3rem;
   }
   .home-container .home-header .home-subtitle {
     color: white;
     font-family: Roboto;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 2rem;
     font-style: normal;
-    max-width: 75rem;
+    max-width: 70rem;
     text-align: center;
+    letter-spacing: 0.2rem;
+    line-height: 3rem;
+    overflow: hidden;
   }
   .home-container .home-header .learn-more {
-    background-color: #fcc01e;
+    background-color: #228B22;
     color: white;
     font-family: Roboto;
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 2.2rem;
+    font-style: normal;
+    border-radius: 4px;
+    padding: 1.25rem 2rem;
+    cursor: pointer;
+    box-shadow: 1px 8px 36px -6px rgba(0, 0, 0, 0.25);
+  }
+  .home-container .home-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+    padding: 12rem 20rem;
+  }
+  .home-container .home-description .description-image {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+  }
+  .home-container .home-description .description-image .under {
+    width: 42rem;
+    grid-column: 2/span 8;
+    grid-row: 1;
+    padding-top: 20%;
+  }
+  .home-container .home-description .description-image .over {
+    width: 22rem;
+    grid-column: 8/-1;
+    grid-row: 1;
+    z-index: 1;
+  }
+  .home-container .home-description .description-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+  }
+  .home-container .home-description .description-text h2 {
+    color: #023020;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 2.2rem;
+    font-style: normal;
+    line-height: 3.2rem;
+  }
+  .home-container .home-description .description-text p {
+    color: #023020;
+    font-family: Roboto;
+    font-weight: 400;
     font-size: 2rem;
     font-style: normal;
-    border-radius: 6px;
-    padding: 1rem 1.5rem;
-    cursor: pointer;
+    line-height: 2.8rem;
+  }
+  .home-container .home-services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  .home-container .home-services .service {
+    width: 25%;
   }
 }
 .navbar-container {
@@ -178,7 +439,8 @@ h2 {
   right: 0;
   bottom: 0;
   width: 100vw;
-  height: 100vh;
+  height: 9rem;
+  overflow: hidden;
 }
 .navbar-container .background-layer {
   width: 100vw;
@@ -190,7 +452,7 @@ h2 {
   bottom: 0;
   z-index: -1;
   background-color: rgba(230, 230, 255, 0.92);
-  transition: all 0.8s ease;
+  transition: all 0.4s ease;
   visibility: hidden;
   opacity: 0;
 }
@@ -250,6 +512,10 @@ h2 {
   opacity: 1;
 }
 
+.expand {
+  height: auto;
+}
+
 @media only screen and (min-width: 650px) and (max-width: 1025px) {
   .navbar-container {
     position: fixed;
@@ -258,7 +524,8 @@ h2 {
     right: 0;
     bottom: 0;
     width: 100vw;
-    height: 100vh;
+    height: 15rem;
+    z-index: 10;
   }
   .navbar-container .background-layer {
     display: none;
@@ -335,7 +602,8 @@ h2 {
     right: 0;
     bottom: 0;
     width: 100vw;
-    height: 100vh;
+    height: 9rem;
+    z-index: 10;
   }
   .navbar-container .background-layer {
     display: none;

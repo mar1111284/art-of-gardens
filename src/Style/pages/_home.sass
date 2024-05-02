@@ -5,7 +5,8 @@
 
     // Photo Header style
     .home-header
-        @include width-height(100vw, 100vh)
+        margin-top: 9rem
+        @include width-height(100vw, 60vh)
         @include set-background-image('../assets/shared/home2.jpg', top, cover)
         @include flexbox(column, center,center, 2rem)
 
@@ -13,17 +14,146 @@
             @include set-font(white,Roboto, 3rem, bold,normal )
             max-width: 35rem
             text-align: center
+            letter-spacing: 0.15rem
+
         .home-subtitle
-            @include set-font(white,Roboto, 1.6rem, 300,normal )
+            @include set-font(white,Roboto, 1.6rem, 400,normal )
             max-width: 30rem
             text-align: center
+            letter-spacing: 0.2rem
+
 
         .learn-more
-            background-color: #fcc01e
+            background-color: #228B22 // Forest green
             @include set-font(white,Roboto, 1.6rem, bold,normal )
-            border-radius: 6px
+            border-radius: 4px
             padding: 1rem 1.5rem
             cursor: pointer
+            letter-spacing: 0.2rem
+        
+    .home-description
+        @include flexbox(column, flex-start,center, 2rem)
+        padding: 2rem
+        
+        .description-image
+            display: none
+        .description-text
+            @include flexbox(column, flex-start,center, 2rem)
+            h2
+                @include set-font(#023020 ,Roboto, 2.2rem, bold,normal )
+                line-height: 3.2rem
+
+
+            p
+                @include set-font(#023020 ,Roboto, 2rem, 400,normal )
+                line-height: 2.8rem
+
+
+@include respond(tablet)
+    .home-container
+        @include width-height(100vw,100%)
+        @include flexbox(column, flex-start,center)
+        min-height: 100vh
+
+        // Photo Header style
+        .home-header
+            margin-top: 9rem
+            @include width-height(100vw, 45vh)
+            @include set-background-image('../assets/shared/home2.jpg', top, cover)
+            @include flexbox(column, center,center, 2rem)
+
+            .home-title
+                @include set-font(white,Roboto, 3.25rem, bold,normal )
+                max-width: 70rem
+                text-align: center
+                letter-spacing: 0.15rem
+
+            .home-subtitle
+                @include set-font(white,Roboto, 2rem, 400,normal )
+                max-width: 55rem
+                text-align: center
+                letter-spacing: 0.2rem
+
+            .learn-more
+                background-color: #228B22 // Forest green
+                @include set-font(white,Roboto, 2rem, bold,normal )
+                border-radius: 4px
+                padding: 1.8rem 2.5rem
+                cursor: pointer
+                letter-spacing: 0.2rem
+        
+        // Home description
+        .home-description
+            @include flexbox(column-reverse, flex-start,center, 4rem)
+            padding: 5rem 20rem
+            
+            .description-image
+                margin-bottom: 6rem
+                display: grid
+                grid-template-columns: repeat(12, 1fr)
+                position: relative
+                .under
+                    width: 42rem
+                    grid-column: 2 / span 8
+                    grid-row: 1
+                    padding-top: 20%
+                .over
+                    width: 22rem
+                    grid-column: 8 / -1
+                    grid-row: 1
+                    z-index: 1
+
+
+            .description-text
+                @include flexbox(column, flex-start,center, 2rem)
+                h2
+                    @include set-font(#023020 ,Roboto, 2.2rem, bold,normal )
+                    line-height: 3.2rem
+
+                p
+                    @include set-font(#023020 ,Roboto, 2rem, 400,normal )
+                    line-height: 2.8rem
+
+        // Services section
+        .home-services
+            @include flexbox(row, center,center)
+            flex-wrap: wrap
+
+
+            .service
+                @include width-height(50%, 42rem)
+                @include flexbox(column, center,center, 1.5rem)
+                padding: 0 2rem
+                h2
+                    @include set-font(white ,Roboto, 4rem, bold,normal)
+
+                p
+                    @include set-font(white ,Roboto, 2rem, 400,normal )
+                    line-height: 3rem
+                    letter-spacing: 0.15rem
+
+            #services-description
+                @include set-background-image('../assets/shared/leaf-pattern.jpg', top, cover)
+                
+            #services-1
+                @include set-background-image('../assets/shared/service1.jpg', top, cover)
+            #services-2
+                @include set-background-image('../assets/shared/service3.jpg', top, cover)
+            #services-3
+                @include set-background-image('../assets/shared/service2.jpg', top, cover)
+
+
+
+
+                
+        
+
+
+
+
+
+
+
 
 @include respond(desktop)
     .home-container
@@ -35,20 +165,65 @@
         .home-header
             @include width-height(100vw, 100vh)
             @include set-background-image('../assets/shared/home2.jpg', top, cover)
-            @include flexbox(column, center,center, 2rem)
+            @include flexbox(column, center,center, 3.8rem)
+            padding-bottom: 20rem
 
             .home-title
                 @include set-font(white,Roboto, 5rem, bold,normal )
-                max-width: 90rem
+                max-width: 80rem
                 text-align: center
+                letter-spacing: 0.3rem
             .home-subtitle
-                @include set-font(white,Roboto, 2rem, 300,normal )
-                max-width: 75rem
+                @include set-font(white,Roboto, 2rem, 400,normal )
+                max-width: 70rem
                 text-align: center
+                letter-spacing: 0.2rem
+                line-height: 3rem
+                overflow: hidden
 
             .learn-more
-                background-color: #fcc01e
-                @include set-font(white,Roboto, 2rem, 300,normal )
-                border-radius: 6px
-                padding: 1rem 1.5rem
+                background-color: #228B22 // Forest green
+                @include set-font(white,Roboto, 2.2rem, 400,normal )
+                border-radius: 4px
+                padding: 1.25rem 2rem
                 cursor: pointer
+                box-shadow: 1px 8px 36px -6px rgba(0,0,0,0.25)
+
+
+        .home-description
+            @include flexbox(row , flex-start,center, 4rem)
+            padding: 12rem 20rem
+            
+            .description-image
+                width: 50%
+                display: grid
+                grid-template-columns: repeat(12, 1fr)
+                position: relative
+                .under
+                    width: 42rem
+                    grid-column: 2 / span 8
+                    grid-row: 1
+                    padding-top: 20%
+                .over
+                    width: 22rem
+                    grid-column: 8 / -1
+                    grid-row: 1
+                    z-index: 1
+
+
+            .description-text
+                width: 50%
+                @include flexbox(column, flex-start,center, 2rem)
+                h2
+                    @include set-font(#023020 ,Roboto, 2.2rem, bold,normal )
+                    line-height: 3.2rem
+
+                p
+                    @include set-font(#023020 ,Roboto, 2rem, 400,normal )
+                    line-height: 2.8rem
+        
+        // Services section
+        .home-services
+            @include flexbox(row, center,center)
+            .service
+                width: 25%

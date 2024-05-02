@@ -58,7 +58,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='navbar-container'>
+    <nav className={`navbar-container ${navbarExpand ? "expand" : ""}`}>
 
       <div className={`background-layer ${navbarExpand ? "expand" : ""}`}></div>
 

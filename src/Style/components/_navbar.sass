@@ -1,6 +1,7 @@
 .navbar-container
     @include set-position(fixed,0,0)
-    @include width-height(100vw, 100vh)
+    @include width-height(100vw, 9rem)
+    overflow: hidden
 
     // Blurred overlaying background
     .background-layer
@@ -8,7 +9,7 @@
         @include set-position(fixed,0,0)
         z-index: -1
         background-color: rgba(230,230,255,0.92)
-        transition: all 0.8s ease
+        transition: all 0.4s ease
         visibility: hidden
         opacity: 0
     .expand
@@ -21,6 +22,7 @@
         background-color: rgb(249, 246, 238)
         box-shadow: 1px 8px 36px -6px rgba(0,0,0,0.25)
         min-height: 9rem
+
 
         .menu-btn
             @include width-height(4rem, 4rem)
@@ -49,11 +51,14 @@
         .expand
             height: 20rem
             opacity: 1
+.expand
+    height: auto
 
 @include respond(tablet)
     .navbar-container
         @include set-position(fixed,0,0)
-        @include width-height(100vw, 100vh)
+        @include width-height(100vw, 15rem)
+        z-index: 10
 
         // Blurred overlaying background
         .background-layer
@@ -101,7 +106,8 @@
 @include respond(desktop)
     .navbar-container
         @include set-position(fixed,0,0)
-        @include width-height(100vw, 100vh)
+        @include width-height(100vw, 9rem)
+        z-index: 10
 
         // Blurred overlaying background
         .background-layer
