@@ -1,6 +1,9 @@
 // Home.jsx
 import { Link } from "react-router-dom"
 
+// Import components
+import FAQ from "../components/FAQ"
+
 const Home = () => {
 
     return (
@@ -9,7 +12,7 @@ const Home = () => {
             <div className="home-header">
                 <p className="home-title">We provide services in Nothern Sydney since 15 years</p>
                 <p className="home-subtitle">Landscaping design is much more than simply planting a few trees and shrubs around your property</p>
-                <Link  to="/services" className="learn-more">Learn more</Link>
+                <Link  to="/services" className="learn-more link">Learn more</Link>
             </div>
 
             <div className="home-description">
@@ -32,22 +35,27 @@ const Home = () => {
             <section className="home-services">
 
                 <div className="service" id="services-description">
+                    <div className="image-overlay"></div>
                     <h2>Our Services</h2>
                     <p>At Art of Gardens, we provide comprehensive services, including web design, digital marketing, and consulting. Our expert team delivers high-quality solutions that exceed expectations.</p>
-                    <Link className="services-link" to='/services'>View All Services</Link>
+                    <Link className="services-link link" to='/services'>View All Services</Link>
                 </div>
                 <div className="service" id="services-1">
+                    <div className="image-overlay"></div>
                     <h2>Design & Renovation</h2>
                 </div>
                 <div className="service" id="services-2">
+                    <div className="image-overlay"></div>
                     <h2>Garden Care & Maintenance</h2>
                 </div>
                 <div className="service" id="services-3">
-                    <h2>Watering and Irrigation</h2>
+                    <div className="image-overlay"></div>
+                    <h2>Watering & Irrigation</h2>
                 </div>
 
             </section>
 
+            <FAQ/>
         </div>
     )
   }

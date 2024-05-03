@@ -24,7 +24,7 @@
 
 
         .learn-more
-            background-color: #228B22 // Forest green
+            background-color: #17d330 // Forest green
             @include set-font(white,Roboto, 1.6rem, bold,normal )
             border-radius: 4px
             padding: 1rem 1.5rem
@@ -32,21 +32,94 @@
             letter-spacing: 0.2rem
         
     .home-description
-        @include flexbox(column, flex-start,center, 2rem)
-        padding: 2rem
-        
+        @include flexbox(column-reverse, flex-start,center, 2rem)
+        padding: 2rem 2rem 5rem 2rem
+        z-index: -1
+              
         .description-image
-            display: none
+            width: 100%
+            display: grid
+            grid-template-columns: repeat(12, 1fr)
+            position: relative
+            .under
+                width: 22rem
+                grid-column: 2 / span 8
+                grid-row: 1
+                padding-top: 20%
+
+            .over
+                width: 11rem
+                grid-column: 8 / -1
+                grid-row: 1
+                z-index: 1
+
         .description-text
             @include flexbox(column, flex-start,center, 2rem)
             h2
-                @include set-font(#023020 ,Roboto, 2.2rem, bold,normal )
+                @include set-font(#075722 ,Roboto, 2rem, bold,normal ) // DarkGreen text 
                 line-height: 3.2rem
 
 
             p
-                @include set-font(#023020 ,Roboto, 2rem, 400,normal )
+                @include set-font(#023020 ,Roboto, 1.8rem, 400,normal )
                 line-height: 2.8rem
+
+    // Services section
+    .home-services
+        @include flexbox(row, center,center)
+        flex-wrap: wrap
+
+
+        .service
+            @include width-height(100%, 18rem)
+            @include flexbox(column, center,flex-start, 1.5rem)
+            padding: 0 0rem 0rem 2rem
+            position: relative
+            h2
+                @include set-font(white, Poppins, 2rem, 400,normal)
+                max-width: 80%
+                z-index: 2
+                letter-spacing: 0.25rem
+                overflow: hidden
+
+
+            p
+                @include set-font(white ,Roboto, 1.4rem, 300,normal )
+                line-height: 2.5rem
+                letter-spacing: 0.15rem
+                z-index: 2
+
+
+            .image-overlay
+                @include width-height(100%, 100%)
+                position: absolute
+                top: 0
+                left: 0
+                background-color: rgb(33,33,33)
+                opacity: 0.5
+
+        #services-description
+            @include set-background-image('../assets/shared/leaf-pattern.jpg', top, cover)
+            height: 25rem
+
+            h2
+                color: #069919
+                @include set-font(#17d330 ,Poppins, 2rem, bold,normal )
+
+            .services-link
+                @include set-font(#17d330 ,Poppins, 1.6rem, bold,normal )
+                cursor: pointer
+                letter-spacing: 0.2rem
+                z-index: 2
+                text-transform: uppercase
+
+        #services-1
+            @include set-background-image('../assets/shared/service1.jpg', top, cover)
+        #services-2
+            @include set-background-image('../assets/shared/service3.jpg', top, cover)
+        #services-3
+            @include set-background-image('../assets/shared/service2.jpg', top, cover)
+
 
 
 @include respond(tablet)
@@ -88,21 +161,24 @@
             padding: 5rem 20rem
             
             .description-image
+                width: 100%
                 margin-bottom: 6rem
                 display: grid
                 grid-template-columns: repeat(12, 1fr)
                 position: relative
                 .under
-                    width: 42rem
+                    width: 40rem
                     grid-column: 2 / span 8
                     grid-row: 1
                     padding-top: 20%
+                    border-radius: 4px
+
                 .over
-                    width: 22rem
+                    width: 21rem
                     grid-column: 8 / -1
                     grid-row: 1
                     z-index: 1
-
+                    border-radius: 4px
 
             .description-text
                 @include flexbox(column, flex-start,center, 2rem)
@@ -121,38 +197,52 @@
 
 
             .service
-                @include width-height(50%, 42rem)
-                @include flexbox(column, center,center, 1.5rem)
-                padding: 0 2rem
+                @include width-height(50%, 34rem)
+                @include flexbox(column, center,flex-start, 1.5rem)
+                padding: 0 0rem 0rem 2rem
+                position: relative
                 h2
-                    @include set-font(white ,Roboto, 4rem, bold,normal)
+                    @include set-font(white, Poppins, 2.2rem, bold,normal)
+                    max-width: 80%
+                    z-index: 2
+                    letter-spacing: 0.25rem
 
                 p
-                    @include set-font(white ,Roboto, 2rem, 400,normal )
-                    line-height: 3rem
+                    @include set-font(white ,Roboto, 1.8rem, 300,normal )
+                    line-height: 2.5rem
                     letter-spacing: 0.15rem
+                    z-index: 2
+
+
+                .image-overlay
+                    @include width-height(100%, 100%)
+                    position: absolute
+                    top: 0
+                    left: 0
+                    background-color: rgb(33,33,33)
+                    opacity: 0.5
 
             #services-description
                 @include set-background-image('../assets/shared/leaf-pattern.jpg', top, cover)
-                
+                height: 34rem
+
+                h2
+                    color: #069919
+                    @include set-font(#17d330 ,Poppins, 2.2rem, bold,normal )
+
+                .services-link
+                    @include set-font(#17d330 ,Poppins, 2rem, bold,normal )
+                    cursor: pointer
+                    letter-spacing: 0.2rem
+                    z-index: 2
+                    text-transform: uppercase
+
             #services-1
                 @include set-background-image('../assets/shared/service1.jpg', top, cover)
             #services-2
                 @include set-background-image('../assets/shared/service3.jpg', top, cover)
             #services-3
                 @include set-background-image('../assets/shared/service2.jpg', top, cover)
-
-
-
-
-                
-        
-
-
-
-
-
-
 
 
 @include respond(desktop)
@@ -192,27 +282,31 @@
 
         .home-description
             @include flexbox(row , flex-start,center, 4rem)
-            padding: 12rem 20rem
+            padding: 12rem 15rem
             
             .description-image
-                width: 50%
+                width: 60%
                 display: grid
                 grid-template-columns: repeat(12, 1fr)
                 position: relative
                 .under
-                    width: 42rem
+                    width: 100%
                     grid-column: 2 / span 8
                     grid-row: 1
                     padding-top: 20%
+                    border-radius: 4px
+
                 .over
-                    width: 22rem
+                    width: 100%
                     grid-column: 8 / -1
                     grid-row: 1
+                    border-radius: 4px
                     z-index: 1
 
 
+
             .description-text
-                width: 50%
+                width: 40%
                 @include flexbox(column, flex-start,center, 2rem)
                 h2
                     @include set-font(#023020 ,Roboto, 2.2rem, bold,normal )
@@ -225,5 +319,50 @@
         // Services section
         .home-services
             @include flexbox(row, center,center)
+
             .service
-                width: 25%
+                @include width-height(25%, 38rem)
+                @include flexbox(column, center,flex-start, 1.5rem)
+                padding: 0 2rem 0rem 2rem
+                position: relative
+                h2
+                    @include set-font(white, Poppins, 2.2rem, bold,normal)
+                    z-index: 2
+                    letter-spacing: 0.25rem
+
+                p
+                    @include set-font(white ,Roboto, 1.6rem, 300,normal )
+                    line-height: 2.5rem
+                    letter-spacing: 0.15rem
+                    z-index: 2
+
+
+                .image-overlay
+                    @include width-height(100%, 100%)
+                    position: absolute
+                    top: 0
+                    left: 0
+                    background-color: rgb(33,33,33)
+                    opacity: 0.5
+
+            #services-description
+                @include set-background-image('../assets/shared/leaf-pattern.jpg', top, cover)
+                height: 38rem
+
+                h2
+                    color: #069919
+                    @include set-font(#17d330 ,Poppins, 2rem, bold,normal )
+
+                .services-link
+                    @include set-font(#17d330 ,Poppins, 1.8rem, bold,normal )
+                    cursor: pointer
+                    letter-spacing: 0.2rem
+                    z-index: 2
+                    text-transform: uppercase
+
+            #services-1
+                @include set-background-image('../assets/shared/service1.jpg', top, cover)
+            #services-2
+                @include set-background-image('../assets/shared/service3.jpg', top, cover)
+            #services-3
+                @include set-background-image('../assets/shared/service2.jpg', top, cover)

@@ -107,7 +107,7 @@ h2 {
   letter-spacing: 0.2rem;
 }
 .home-container .home-header .learn-more {
-  background-color: #228B22;
+  background-color: #17d330;
   color: white;
   font-family: Roboto;
   font-weight: bold;
@@ -120,14 +120,30 @@ h2 {
 }
 .home-container .home-description {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
-  padding: 2rem;
+  padding: 2rem 2rem 5rem 2rem;
+  z-index: -1;
 }
 .home-container .home-description .description-image {
-  display: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+}
+.home-container .home-description .description-image .under {
+  width: 22rem;
+  grid-column: 2/span 8;
+  grid-row: 1;
+  padding-top: 20%;
+}
+.home-container .home-description .description-image .over {
+  width: 11rem;
+  grid-column: 8/-1;
+  grid-row: 1;
+  z-index: 1;
 }
 .home-container .home-description .description-text {
   display: flex;
@@ -137,10 +153,10 @@ h2 {
   gap: 2rem;
 }
 .home-container .home-description .description-text h2 {
-  color: #023020;
+  color: #075722;
   font-family: Roboto;
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-style: normal;
   line-height: 3.2rem;
 }
@@ -148,9 +164,98 @@ h2 {
   color: #023020;
   font-family: Roboto;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-style: normal;
   line-height: 2.8rem;
+}
+.home-container .home-services {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.home-container .home-services .service {
+  width: 100%;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 0 0rem 0rem 2rem;
+  position: relative;
+}
+.home-container .home-services .service h2 {
+  color: white;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 2rem;
+  font-style: normal;
+  max-width: 80%;
+  z-index: 2;
+  letter-spacing: 0.25rem;
+  overflow: hidden;
+}
+.home-container .home-services .service p {
+  color: white;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1.4rem;
+  font-style: normal;
+  line-height: 2.5rem;
+  letter-spacing: 0.15rem;
+  z-index: 2;
+}
+.home-container .home-services .service .image-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(33, 33, 33);
+  opacity: 0.5;
+}
+.home-container .home-services #services-description {
+  background-image: url("../assets/shared/leaf-pattern.jpg");
+  background-position: top;
+  background-size: cover;
+  height: 25rem;
+}
+.home-container .home-services #services-description h2 {
+  color: #069919;
+  color: #17d330;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 2rem;
+  font-style: normal;
+}
+.home-container .home-services #services-description .services-link {
+  color: #17d330;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 1.6rem;
+  font-style: normal;
+  cursor: pointer;
+  letter-spacing: 0.2rem;
+  z-index: 2;
+  text-transform: uppercase;
+}
+.home-container .home-services #services-1 {
+  background-image: url("../assets/shared/service1.jpg");
+  background-position: top;
+  background-size: cover;
+}
+.home-container .home-services #services-2 {
+  background-image: url("../assets/shared/service3.jpg");
+  background-position: top;
+  background-size: cover;
+}
+.home-container .home-services #services-3 {
+  background-image: url("../assets/shared/service2.jpg");
+  background-position: top;
+  background-size: cover;
 }
 
 @media only screen and (min-width: 650px) and (max-width: 1025px) {
@@ -218,22 +323,25 @@ h2 {
     padding: 5rem 20rem;
   }
   .home-container .home-description .description-image {
+    width: 100%;
     margin-bottom: 6rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     position: relative;
   }
   .home-container .home-description .description-image .under {
-    width: 42rem;
+    width: 40rem;
     grid-column: 2/span 8;
     grid-row: 1;
     padding-top: 20%;
+    border-radius: 4px;
   }
   .home-container .home-description .description-image .over {
-    width: 22rem;
+    width: 21rem;
     grid-column: 8/-1;
     grid-row: 1;
     z-index: 1;
+    border-radius: 4px;
   }
   .home-container .home-description .description-text {
     display: flex;
@@ -268,34 +376,68 @@ h2 {
   }
   .home-container .home-services .service {
     width: 50%;
-    height: 42rem;
+    height: 34rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.5rem;
-    padding: 0 2rem;
+    padding: 0 0rem 0rem 2rem;
+    position: relative;
   }
   .home-container .home-services .service h2 {
     color: white;
-    font-family: Roboto;
+    font-family: Poppins;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 2.2rem;
     font-style: normal;
+    max-width: 80%;
+    z-index: 2;
+    letter-spacing: 0.25rem;
   }
   .home-container .home-services .service p {
     color: white;
     font-family: Roboto;
-    font-weight: 400;
-    font-size: 2rem;
+    font-weight: 300;
+    font-size: 1.8rem;
     font-style: normal;
-    line-height: 3rem;
+    line-height: 2.5rem;
     letter-spacing: 0.15rem;
+    z-index: 2;
+  }
+  .home-container .home-services .service .image-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(33, 33, 33);
+    opacity: 0.5;
   }
   .home-container .home-services #services-description {
     background-image: url("../assets/shared/leaf-pattern.jpg");
     background-position: top;
     background-size: cover;
+    height: 34rem;
+  }
+  .home-container .home-services #services-description h2 {
+    color: #069919;
+    color: #17d330;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 2.2rem;
+    font-style: normal;
+  }
+  .home-container .home-services #services-description .services-link {
+    color: #17d330;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 2rem;
+    font-style: normal;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+    z-index: 2;
+    text-transform: uppercase;
   }
   .home-container .home-services #services-1 {
     background-image: url("../assets/shared/service1.jpg");
@@ -377,28 +519,30 @@ h2 {
     justify-content: flex-start;
     align-items: center;
     gap: 4rem;
-    padding: 12rem 20rem;
+    padding: 12rem 15rem;
   }
   .home-container .home-description .description-image {
-    width: 50%;
+    width: 60%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     position: relative;
   }
   .home-container .home-description .description-image .under {
-    width: 42rem;
+    width: 100%;
     grid-column: 2/span 8;
     grid-row: 1;
     padding-top: 20%;
+    border-radius: 4px;
   }
   .home-container .home-description .description-image .over {
-    width: 22rem;
+    width: 100%;
     grid-column: 8/-1;
     grid-row: 1;
+    border-radius: 4px;
     z-index: 1;
   }
   .home-container .home-description .description-text {
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -430,6 +574,82 @@ h2 {
   }
   .home-container .home-services .service {
     width: 25%;
+    height: 38rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 0 2rem 0rem 2rem;
+    position: relative;
+  }
+  .home-container .home-services .service h2 {
+    color: white;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 2.2rem;
+    font-style: normal;
+    z-index: 2;
+    letter-spacing: 0.25rem;
+  }
+  .home-container .home-services .service p {
+    color: white;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 2.5rem;
+    letter-spacing: 0.15rem;
+    z-index: 2;
+  }
+  .home-container .home-services .service .image-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(33, 33, 33);
+    opacity: 0.5;
+  }
+  .home-container .home-services #services-description {
+    background-image: url("../assets/shared/leaf-pattern.jpg");
+    background-position: top;
+    background-size: cover;
+    height: 38rem;
+  }
+  .home-container .home-services #services-description h2 {
+    color: #069919;
+    color: #17d330;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 2rem;
+    font-style: normal;
+  }
+  .home-container .home-services #services-description .services-link {
+    color: #17d330;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 1.8rem;
+    font-style: normal;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+    z-index: 2;
+    text-transform: uppercase;
+  }
+  .home-container .home-services #services-1 {
+    background-image: url("../assets/shared/service1.jpg");
+    background-position: top;
+    background-size: cover;
+  }
+  .home-container .home-services #services-2 {
+    background-image: url("../assets/shared/service3.jpg");
+    background-position: top;
+    background-size: cover;
+  }
+  .home-container .home-services #services-3 {
+    background-image: url("../assets/shared/service2.jpg");
+    background-position: top;
+    background-size: cover;
   }
 }
 .navbar-container {
@@ -441,6 +661,7 @@ h2 {
   width: 100vw;
   height: 9rem;
   overflow: hidden;
+  z-index: 10;
 }
 .navbar-container .background-layer {
   width: 100vw;
@@ -671,4 +892,77 @@ h2 {
   .navbar-container .navbar .links-container .link .selected {
     display: block;
   }
+}
+.faq-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  max-width: 60rem;
+  padding-bottom: 5rem;
+  padding: 2rem;
+}
+.faq-container .faq-title {
+  color: #075722;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 2.2rem;
+  font-style: normal;
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+}
+.faq-container .question {
+  width: 100%;
+  border-radius: 6px;
+  border: none;
+  overflow: hidden;
+  transition: max-height 0.8s linear;
+}
+.faq-container .question .question-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  color: #075722;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+  background-color: rgba(0, 128, 0, 0.2);
+  width: 100%;
+  height: 5rem;
+  padding: 0 1.25rem;
+  cursor: pointer;
+}
+.faq-container .question .question-header .icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+.faq-container .question .selected {
+  background-color: #128639;
+  color: white;
+}
+.faq-container .question .question-answer {
+  color: black;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+  padding: 1.5rem;
+  line-height: 2.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.faq-container .selected {
+  border: 2px solid rgba(33, 33, 33, 0.3);
+  max-height: 50rem;
+}
+.faq-container .question:not(.selected) {
+  max-height: 5rem;
 }/*# sourceMappingURL=main.css.map */
