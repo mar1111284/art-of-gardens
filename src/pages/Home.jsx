@@ -1,5 +1,6 @@
 // Home.jsx
 import { Link } from "react-router-dom"
+import RightArrow from "../assets/shared/right-arrow.png"
 
 // Import components
 import FAQ from "../components/FAQ"
@@ -38,7 +39,10 @@ const Home = () => {
                     <div className="image-overlay"></div>
                     <h2>Our Services</h2>
                     <p>At Art of Gardens, we provide comprehensive services, including web design, digital marketing, and consulting. Our expert team delivers high-quality solutions that exceed expectations.</p>
-                    <Link className="services-link link" to='/services'>View All Services</Link>
+                    <div className="services-link-container"> 
+                        <img src={RightArrow} alt="right arrow"></img>
+                        <Link className="services-link link" to='/services'>View All Services</Link>
+                    </div>
                 </div>
                 <div className="service" id="services-1">
                     <div className="image-overlay"></div>

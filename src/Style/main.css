@@ -63,6 +63,16 @@ h2 {
   border-radius: 50%;
 }
 
+.image-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(33, 33, 33);
+  opacity: 0.5;
+}
+
 .home-container {
   width: 100vw;
   height: 100%;
@@ -208,14 +218,12 @@ h2 {
   letter-spacing: 0.15rem;
   z-index: 2;
 }
-.home-container .home-services .service .image-overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgb(33, 33, 33);
-  opacity: 0.5;
+.home-container .home-services .service .services-link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 .home-container .home-services #services-description {
   background-image: url("../assets/shared/leaf-pattern.jpg");
@@ -405,14 +413,12 @@ h2 {
     letter-spacing: 0.15rem;
     z-index: 2;
   }
-  .home-container .home-services .service .image-overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgb(33, 33, 33);
-    opacity: 0.5;
+  .home-container .home-services .service .services-link-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
   .home-container .home-services #services-description {
     background-image: url("../assets/shared/leaf-pattern.jpg");
@@ -602,14 +608,12 @@ h2 {
     letter-spacing: 0.15rem;
     z-index: 2;
   }
-  .home-container .home-services .service .image-overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgb(33, 33, 33);
-    opacity: 0.5;
+  .home-container .home-services .service .services-link-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
   .home-container .home-services #services-description {
     background-image: url("../assets/shared/leaf-pattern.jpg");
@@ -893,6 +897,61 @@ h2 {
     display: block;
   }
 }
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-image: url("../assets/shared/leaf-pattern.jpg");
+  background-position: top;
+  background-size: cover;
+  box-shadow: 0px -13px 50px -10px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+.footer-container .footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  z-index: 2;
+}
+.footer-container .footer-content .footer-logo {
+  color: #17d330;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 1.6rem;
+  font-style: normal;
+  text-transform: uppercase;
+}
+.footer-container .footer-content .footer-text {
+  color: white;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+  letter-spacing: 0.12rem;
+}
+.footer-container .footer-content .social-network {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  color: white;
+  font-size: 3rem;
+}
+.footer-container .footer-content .content-title {
+  color: #17d330;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 1.6rem;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
 .faq-container {
   width: 100%;
   height: auto;
@@ -902,8 +961,7 @@ h2 {
   align-items: center;
   gap: 1rem;
   max-width: 60rem;
-  padding-bottom: 5rem;
-  padding: 2rem;
+  padding: 2rem 2rem 8rem;
 }
 .faq-container .faq-title {
   color: #075722;
@@ -921,6 +979,7 @@ h2 {
   border: none;
   overflow: hidden;
   transition: max-height 0.8s linear;
+  box-shadow: 1px 8px 36px -6px rgba(0, 0, 0, 0.05);
 }
 .faq-container .question .question-header {
   display: flex;
@@ -961,6 +1020,7 @@ h2 {
 }
 .faq-container .selected {
   border: 2px solid rgba(33, 33, 33, 0.3);
+  box-shadow: 1px 8px 36px -6px rgba(0, 0, 0, 0.2);
   max-height: 50rem;
 }
 .faq-container .question:not(.selected) {

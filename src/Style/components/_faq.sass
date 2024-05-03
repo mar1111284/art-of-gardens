@@ -2,8 +2,7 @@
     @include width-height(100%, auto)
     @include flexbox(column, flex-start, center, 1rem)
     max-width: 60rem
-    padding-bottom: 5rem
-    padding: 2rem
+    padding: 2rem 2rem 8rem
 
     .faq-title
         @include set-font(#075722, Poppins, 2.2rem, bold,normal)
@@ -17,6 +16,8 @@
         border: none
         overflow: hidden
         transition: max-height 0.8s linear
+        box-shadow: 1px 8px 36px -6px rgba(0,0,0,0.05)
+
         .question-header
             @include flexbox(row, space-between, center)
             @include set-font(#075722, Poppins, 1.5rem, 400,normal)
@@ -41,6 +42,7 @@
             cursor: pointer
     .selected
         border: 2px solid rgba(33,33,33, 0.3)
+        box-shadow: 1px 8px 36px -6px rgba(0,0,0,0.2)
         max-height: 50rem
 
     .question:not(.selected)
