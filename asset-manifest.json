@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/art-of-gardens/static/css/main.ba62e0ba.css",
-    "main.js": "/art-of-gardens/static/js/main.22d15786.js",
+    "main.css": "/art-of-gardens/static/css/main.4e742db3.css",
+    "main.js": "/art-of-gardens/static/js/main.0ec68d26.js",
     "static/js/453.b09cdf09.chunk.js": "/art-of-gardens/static/js/453.b09cdf09.chunk.js",
-    "static/media/service1.jpg": "/art-of-gardens/static/media/service1.35255f7dece14eacc40d.jpg",
-    "static/media/home2.jpg": "/art-of-gardens/static/media/home2.5dfd22d37f6d86a9c7d6.jpg",
-    "static/media/service2.jpg": "/art-of-gardens/static/media/service2.9f8c300de6d1d879ee48.jpg",
-    "static/media/service3.jpg": "/art-of-gardens/static/media/service3.c361fee90a21e6f4948c.jpg",
+    "static/media/header-desktop.webp": "/art-of-gardens/static/media/header-desktop.ff8fbe743d357b698c01.webp",
+    "static/media/header-tablet.webp": "/art-of-gardens/static/media/header-tablet.6489e88c5902f102c484.webp",
+    "static/media/header-mobile.webp": "/art-of-gardens/static/media/header-mobile.4f1080a0cd4252cdcb1f.webp",
     "static/media/leaf-pattern.jpg": "/art-of-gardens/static/media/leaf-pattern.0d1fb359859ebbd360b6.jpg",
+    "static/media/service1.webp": "/art-of-gardens/static/media/service1.bb6586828f64e125cc69.webp",
+    "static/media/service3.webp": "/art-of-gardens/static/media/service3.e39bedbfc9149fd9cd1d.webp",
+    "static/media/service2.webp": "/art-of-gardens/static/media/service2.c2d0e32b1b5d7b6972d8.webp",
     "index.html": "/art-of-gardens/index.html",
-    "main.ba62e0ba.css.map": "/art-of-gardens/static/css/main.ba62e0ba.css.map",
-    "main.22d15786.js.map": "/art-of-gardens/static/js/main.22d15786.js.map",
+    "main.4e742db3.css.map": "/art-of-gardens/static/css/main.4e742db3.css.map",
+    "main.0ec68d26.js.map": "/art-of-gardens/static/js/main.0ec68d26.js.map",
     "453.b09cdf09.chunk.js.map": "/art-of-gardens/static/js/453.b09cdf09.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba62e0ba.css",
-    "static/js/main.22d15786.js"
+    "static/css/main.4e742db3.css",
+    "static/js/main.0ec68d26.js"
   ]
 }
