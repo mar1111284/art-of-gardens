@@ -17,6 +17,7 @@ import About from './pages/About';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import PrivacyAndSupport from "./pages/PrivacyAndSupport";
 
 const options = {
   basename: "/",
@@ -59,6 +60,10 @@ const routes = [
       {
         path: "/blog",
         element: <Blog />,
+      },
+      {
+        path: "/privacy",
+        element: <PrivacyAndSupport />,
       },
     ],
   },

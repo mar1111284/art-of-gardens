@@ -81,7 +81,7 @@
                 margin: 3rem 2rem
 
             .links-container
-                @include flexbox(row, center,center, 1rem)
+                @include flexbox(row, center,center, 2rem)
                 @include width-height(100%,100%)
                 padding: 0
                 opacity: 1
@@ -90,7 +90,7 @@
                 .link
                     width: auto
                     @include flexbox(row, center,center)
-                    @include set-font(black,Roboto, 1.8rem, 300,normal )
+                    @include set-font(black,Roboto, 2rem, 300,normal )
                     height: 100%
                     position: relative
 
@@ -130,7 +130,7 @@
                 margin: 3rem 2rem
 
             .links-container
-                @include flexbox(row, center,center, 1.5rem)
+                @include flexbox(row, center,center, 2.5rem)
                 @include width-height(100%,100%)
                 padding: 0
                 opacity: 1
@@ -139,7 +139,7 @@
                 .link
                     width: auto
                     @include flexbox(row, center,center)
-                    @include set-font(black,Roboto, 1.8rem, 300,normal )
+                    @include set-font(black,Roboto, 1.8rem, 400,normal )
                     height: 100%
                     position: relative
 
@@ -148,6 +148,7 @@
                         @include width-height(100%, 0.35rem)
                         @include set-position(absolute, undefined, undefined,0,0)
                         background-color: rgba(33,33,33, 0.7)
+
                         display: none
 
                     .selected

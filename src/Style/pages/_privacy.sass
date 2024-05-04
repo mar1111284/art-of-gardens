@@ -1,0 +1,58 @@
+.privacy-support-container
+    @include flexbox(column, center,flex-start, 2rem)
+    min-height: 100vh
+    padding: 10rem 2rem
+
+
+    h2
+        @include set-font(#075722, Poppins, 1.8rem, bold,normal)
+
+    h3
+        @include set-font(black, Poppins, 1.4rem, bold,normal)
+    p
+        @include set-font(black, Poppins, 1.4rem, 400,normal)
+
+    .privacy-policy
+        @include flexbox(column, center,flex-start, 1rem)
+
+    .support
+        @include flexbox(column, center,flex-start, 1rem)
+
+@include respond(tablet)
+    .privacy-support-container
+        padding: 14rem 10rem
+        gap: 4rem
+
+        h2
+            @include set-font(#075722, Poppins, 2.5rem, bold,normal)
+
+        h3
+            @include set-font(black, Poppins, 1.8rem, bold,normal)
+        p
+            @include set-font(black, Poppins, 1.8rem, 400,normal)
+
+        .privacy-policy
+            @include flexbox(column, center,flex-start, 2rem)
+
+        .support
+            @include flexbox(column, center,flex-start, 2rem)
+
+@include respond(desktop)
+    .privacy-support-container
+        padding: 14rem 20rem
+        gap: 4rem
+
+        h2
+            @include set-font(#075722, Poppins, 2.2rem, bold,normal)
+
+        h3
+            @include set-font(black, Poppins, 1.4rem, bold,normal)
+        p
+            @include set-font(black, Poppins, 1.4rem, 400,normal)
+
+        .privacy-policy
+            @include flexbox(column, center,flex-start, 1rem)
+
+        .support
+            @include flexbox(column, center,flex-start, 1rem)
+

@@ -5,23 +5,33 @@ import RightArrow from "../assets/shared/right-arrow.png"
 // Import components
 import FAQ from "../components/FAQ"
 
+//import image
+import HeaderImage from '../assets/shared/home2.jpg'
+
 const Home = () => {
 
     return (
         <div className='home-container'>
 
             <div className="home-header">
-                <p className="home-title">We provide services in Nothern Sydney since 15 years</p>
-                <p className="home-subtitle">Landscaping design is much more than simply planting a few trees and shrubs around your property</p>
-                <Link  to="/services" className="learn-more link">Learn more</Link>
+                <img className="header-image" alt="header-image" src={HeaderImage}></img>
+                <div className="image-overlay-light"></div>
+                <div className="home-header-content">
+                    <p className="home-title">The Best Landscaping Services in Northern Sydney</p>
+                    <p className="home-subtitle">Landscaping design is much more than simply planting a few trees and shrubs around your property</p>
+                    <Link  to="/services" className="learn-more link">Learn more</Link>                    
+                </div>
+
             </div>
 
             <div className="home-description">
+
                 <div className="description-image">
-                <img className="under" src={process.env.PUBLIC_URL + '/hedge-trimmer.jpg'} alt="Worker with Hedge Trimmer" />
-                <img className="over" src={process.env.PUBLIC_URL + '/snipper.jpg'} alt="Worker with Lawn Mower" />
+                    <img src={process.env.PUBLIC_URL + '/snipper.jpg'} alt="Worker with Lawn Mower" />
+                    <img src={process.env.PUBLIC_URL + '/hedge-trimmer.jpg'} alt="Worker with Hedge Trimmer" />
 
                 </div>
+
                 <div className="description-text">
                     <h2>Your Landscape, Your Way: Crafting Outdoor Spaces to Perfection</h2>
                     <p>

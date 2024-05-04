@@ -3,7 +3,7 @@ import Up from "../assets/shared/up.png";
 import Information from "../assets/shared/information.png";
 
 const FAQ = () => {
-  const [expandedQuestion, setExpandedQuestion] = useState(null);
+  const [expandedQuestion, setExpandedQuestion] = useState(0);
 
   const faqData = [
     {
