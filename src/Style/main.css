@@ -96,6 +96,15 @@ h2 {
   color: #075722;
 }
 
+.separator {
+  content: "";
+  width: 10rem;
+  height: 0.2rem;
+  background-color: rgba(33, 33, 33, 0.8);
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
 .home-container {
   width: 100vw;
   height: 100%;
@@ -529,6 +538,152 @@ h2 {
     font-style: normal;
   }
 }
+.services-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  min-height: 100vh;
+  padding-top: 11rem;
+  padding-bottom: 10rem;
+}
+.services-container .services-section {
+  width: 100%;
+  padding: 2rem;
+}
+.services-container .services-section h2 {
+  color: #075722;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 2.2rem;
+  font-style: normal;
+}
+.services-container .services-section h3 {
+  color: black;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 1.4rem;
+  font-style: normal;
+}
+.services-container .services-section p {
+  padding-top: 1rem;
+  color: black;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+}
+.services-container .services {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.services-container .services .service {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
+  min-height: 50rem;
+}
+.services-container .services .service .service-image {
+  border-radius: 2px;
+  width: 100%;
+  height: 35rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+.services-container .services .service .service-content .service-title {
+  color: black;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 1.8rem;
+  font-style: normal;
+  overflow: hidden;
+}
+.services-container .services .service .service-content .service-description {
+  margin-top: 2rem;
+  color: black;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+  line-height: 2.4rem;
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1025px) {
+  .services-container {
+    padding-top: 11rem;
+  }
+  .services-container .services-section {
+    width: 60%;
+    padding: 2rem;
+  }
+  .services-container .services-section h2 {
+    color: #075722;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 2.4rem;
+    font-style: normal;
+  }
+  .services-container .services-section p {
+    padding-top: 1rem;
+    color: black;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.8rem;
+    font-style: normal;
+    line-height: 2.8rem;
+  }
+  .services-container .services {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .services-container .services-section {
+    width: 70%;
+  }
+  .services-container .services-section h2 {
+    color: #075722;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 2.2rem;
+    font-style: normal;
+    text-align: start;
+  }
+  .services-container .services-section p {
+    width: 50%;
+    text-align: start;
+    padding-top: 1rem;
+    color: black;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-style: normal;
+    line-height: 2.8rem;
+  }
+  .services-container .services {
+    width: 70%;
+    flex-wrap: nowrap;
+  }
+  .services-container .services .separator {
+    display: none;
+  }
+  .services-container .services .service .service-content .service-title {
+    font-size: 1.6rem;
+    min-height: 5rem;
+  }
+}
 .privacy-support-container {
   display: flex;
   flex-direction: column;
@@ -853,7 +1008,7 @@ h2 {
     font-weight: Bold;
     font-size: 2rem;
     font-style: normal;
-    margin: 3rem 2rem;
+    margin: 3rem 2rem 3rem 0;
   }
   .navbar-container .navbar .links-container {
     display: flex;

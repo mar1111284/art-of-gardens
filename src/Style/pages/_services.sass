@@ -1,0 +1,91 @@
+.services-container
+    @include flexbox(column, flex-start, center, 2rem)
+    min-height: 100vh
+    padding-top: 11rem
+    padding-bottom: 10rem
+
+    .services-section
+        width: 100%
+        padding: 2rem
+        h2
+            @include set-font(#075722, Poppins, 2.2rem, bold,normal)
+
+        h3
+            @include set-font(black, Poppins, 1.4rem, bold,normal)
+        p
+            padding-top: 1rem
+            @include set-font(black, Poppins, 1.4rem, 400,normal)
+            
+    .services
+        width: 100%
+        @include flexbox(row, center, flex-start, 1.5rem)
+        flex-wrap: wrap
+        padding: 1rem
+
+        .service
+            @include flexbox(column, flex-start, flex-start, 2rem)
+            width: 100%
+            padding: 1rem
+            min-height: 50rem
+            .service-image
+                border-radius: 2px
+                width: 100%
+                height: 35rem
+                object-fit: cover
+                clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%)
+
+            .service-content
+                .service-title 
+                    @include set-font(black, Poppins, 1.8rem, bold,normal)
+                    overflow: hidden
+
+                .service-description
+                    margin-top: 2rem
+                    @include set-font(black, Roboto, 1.4rem, 400,normal)
+                    line-height: 2.4rem
+                    
+
+@include respond(tablet)
+    .services-container
+        padding-top: 11rem
+
+        .services-section
+            width: 60%
+            padding: 2rem
+            h2
+                @include set-font(#075722, Poppins, 2.4rem, bold,normal)
+
+            p
+                padding-top: 1rem
+                @include set-font(black, Poppins, 1.8rem, 400,normal)
+                line-height: 2.8rem
+        .services
+            width: 60%
+
+@include respond(desktop)
+    .services-container
+        
+        .services-section
+            width: 70%
+            h2
+                @include set-font(#075722, Poppins, 2.2rem, bold,normal)
+                text-align: start
+
+            p
+                width: 50%
+                text-align: start
+                padding-top: 1rem
+                @include set-font(black, Roboto, 1.5rem, 400,normal)
+                line-height: 2.8rem
+        .services
+            width: 70%
+            flex-wrap: nowrap
+
+            .separator
+                display: none
+
+            .service
+                .service-content
+                    .service-title
+                        font-size: 1.6rem
+                        min-height: 5rem

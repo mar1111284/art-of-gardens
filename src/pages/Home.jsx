@@ -17,7 +17,7 @@ const Home = () => {
                 <img className="header-image" alt="header-image" src={HeaderImage}></img>
                 <div className="image-overlay-light"></div>
                 <div className="home-header-content">
-                    <p className="home-title">The Best Landscaping Services in Northern Sydney</p>
+                    <p className="home-title">Professional Landscaping Services in Northern Sydney</p>
                     <p className="home-subtitle">Landscaping design is much more than simply planting a few trees and shrubs around your property</p>
                     <Link  to="/services" className="learn-more link">Learn more</Link>                    
                 </div>
