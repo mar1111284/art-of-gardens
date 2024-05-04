@@ -1,0 +1,14 @@
+.blog-container
+    @include flexbox(column, flex-start, flex-start, 2rem)
+    min-height: 100vh
+    padding: 12rem 2rem
+    h2
+    @include set-font(#075722, Poppins, 2.2rem, bold,normal)
+
+    .info
+        max-width: 600px
+        h3
+            @include set-font(black, Poppins, 1.4rem, bold,normal)
+        p
+            margin-top: 1rem
+            @include set-font(black, Poppins, 1.4rem, 400,normal)

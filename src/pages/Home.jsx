@@ -1,20 +1,52 @@
 // Home.jsx
 import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
 import RightArrow from "../assets/shared/right-arrow.png"
 
 // Import components
 import FAQ from "../components/FAQ"
 
 //import image
-import HeaderImage from '../assets/shared/home2.jpg'
+import HeaderDesktop from '../assets/shared/header-desktop.webp'
+import HeaderTablet from '../assets/shared/header-tablet.webp'
+import HeaderMobile from '../assets/shared/header-mobile.webp'
+
 
 const Home = () => {
+
+    const [screenWidth, setScreenWidth] = useState('');
+
+    useEffect(() => {
+        const checkWidth = () => {
+          const width = window.innerWidth;
+          if (width <= 480) {
+            setScreenWidth('mobile');
+          } else if (width > 480 && width <= 1025) {
+            setScreenWidth('tablet');
+          } else {
+            setScreenWidth('desktop');
+          }
+        };
+    
+        checkWidth(); // Call the function to set initial screen width
+    
+        window.addEventListener('resize', checkWidth);
+    
+        // Cleanup
+        return () => {
+          window.removeEventListener('resize', checkWidth);
+        };
+      }, []);
 
     return (
         <div className='home-container'>
 
             <div className="home-header">
-                <img className="header-image" alt="header-image" src={HeaderImage}></img>
+            <img className="header-image" alt="header-image" src={
+                screenWidth === 'mobile' ? HeaderMobile :
+                screenWidth === 'tablet' ? HeaderTablet :
+                HeaderDesktop
+            }></img>
                 <div className="image-overlay-light"></div>
                 <div className="home-header-content">
                     <p className="home-title">Professional Landscaping Services in Northern Sydney</p>

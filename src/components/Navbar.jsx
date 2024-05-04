@@ -4,7 +4,6 @@ import { Link, useLocation } from "react-router-dom";
 // Import assets
 import Burger from '../assets/shared/menu_open.png';
 import Close from '../assets/shared/menu_close.png';
-import DoubleArrow from '../assets/shared/double_arrow.png';
 
 const Navbar = () => {
 
@@ -86,7 +85,7 @@ const Navbar = () => {
             About
             <div className={location.pathname === '/about' ? 'selector selected' : 'selector'}></div>
           </Link>
-          <Link className='link' to="/about"onClick={navbarExpand ? handleToggle : null}>
+          <Link className='link' to="/blog"onClick={navbarExpand ? handleToggle : null}>
             Blog
             <div className={location.pathname === '/blog' ? 'selector selected' : 'selector'}></div>
           </Link>

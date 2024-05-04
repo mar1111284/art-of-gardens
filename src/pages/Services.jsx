@@ -1,9 +1,9 @@
 // Services.jsx
 
 // Import image
-import LandscapingDesign from "../assets/shared/service1.jpg"
-import Service2 from "../assets/shared/service2.jpg"
-import Service3 from "../assets/shared/service3.jpg"
+import LandscapingDesign from "../assets/shared/service1.webp"
+import Service2 from "../assets/shared/service2.webp"
+import Service3 from "../assets/shared/service3.webp"
 
 const Services = () => {
 
