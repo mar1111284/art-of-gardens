@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.3da6dc7b.css",
-    "main.js": "/static/js/main.b0930f33.js",
-    "static/js/453.b09cdf09.chunk.js": "/static/js/453.b09cdf09.chunk.js",
-    "static/media/service1.jpg": "/static/media/service1.35255f7dece14eacc40d.jpg",
-    "static/media/home2.jpg": "/static/media/home2.5dfd22d37f6d86a9c7d6.jpg",
-    "static/media/service2.jpg": "/static/media/service2.9f8c300de6d1d879ee48.jpg",
-    "static/media/service3.jpg": "/static/media/service3.c361fee90a21e6f4948c.jpg",
-    "static/media/leaf-pattern.jpg": "/static/media/leaf-pattern.0d1fb359859ebbd360b6.jpg",
-    "index.html": "/index.html",
-    "main.3da6dc7b.css.map": "/static/css/main.3da6dc7b.css.map",
-    "main.b0930f33.js.map": "/static/js/main.b0930f33.js.map",
-    "453.b09cdf09.chunk.js.map": "/static/js/453.b09cdf09.chunk.js.map"
+    "main.css": "/art-of-gardens/static/css/main.ba62e0ba.css",
+    "main.js": "/art-of-gardens/static/js/main.22d15786.js",
+    "static/js/453.b09cdf09.chunk.js": "/art-of-gardens/static/js/453.b09cdf09.chunk.js",
+    "static/media/service1.jpg": "/art-of-gardens/static/media/service1.35255f7dece14eacc40d.jpg",
+    "static/media/home2.jpg": "/art-of-gardens/static/media/home2.5dfd22d37f6d86a9c7d6.jpg",
+    "static/media/service2.jpg": "/art-of-gardens/static/media/service2.9f8c300de6d1d879ee48.jpg",
+    "static/media/service3.jpg": "/art-of-gardens/static/media/service3.c361fee90a21e6f4948c.jpg",
+    "static/media/leaf-pattern.jpg": "/art-of-gardens/static/media/leaf-pattern.0d1fb359859ebbd360b6.jpg",
+    "index.html": "/art-of-gardens/index.html",
+    "main.ba62e0ba.css.map": "/art-of-gardens/static/css/main.ba62e0ba.css.map",
+    "main.22d15786.js.map": "/art-of-gardens/static/js/main.22d15786.js.map",
+    "453.b09cdf09.chunk.js.map": "/art-of-gardens/static/js/453.b09cdf09.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3da6dc7b.css",
-    "static/js/main.b0930f33.js"
+    "static/css/main.ba62e0ba.css",
+    "static/js/main.22d15786.js"
   ]
 }
