@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/art-of-gardens/static/css/main.4e742db3.css",
+    "main.css": "/art-of-gardens/static/css/main.7d97a47f.css",
     "main.js": "/art-of-gardens/static/js/main.0ec68d26.js",
     "static/js/453.b09cdf09.chunk.js": "/art-of-gardens/static/js/453.b09cdf09.chunk.js",
     "static/media/header-desktop.webp": "/art-of-gardens/static/media/header-desktop.ff8fbe743d357b698c01.webp",
@@ -11,12 +11,12 @@
     "static/media/service3.webp": "/art-of-gardens/static/media/service3.e39bedbfc9149fd9cd1d.webp",
     "static/media/service2.webp": "/art-of-gardens/static/media/service2.c2d0e32b1b5d7b6972d8.webp",
     "index.html": "/art-of-gardens/index.html",
-    "main.4e742db3.css.map": "/art-of-gardens/static/css/main.4e742db3.css.map",
+    "main.7d97a47f.css.map": "/art-of-gardens/static/css/main.7d97a47f.css.map",
     "main.0ec68d26.js.map": "/art-of-gardens/static/js/main.0ec68d26.js.map",
     "453.b09cdf09.chunk.js.map": "/art-of-gardens/static/js/453.b09cdf09.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4e742db3.css",
+    "static/css/main.7d97a47f.css",
     "static/js/main.0ec68d26.js"
   ]
 }
