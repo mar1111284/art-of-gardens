@@ -650,7 +650,11 @@ h2 {
   }
 }
 @media only screen and (min-width: 1025px) {
+  .services-container {
+    gap: 5rem;
+  }
   .services-container .services-section {
+    padding: 1rem 0;
     width: 70%;
   }
   .services-container .services-section h2 {
@@ -675,9 +679,14 @@ h2 {
   .services-container .services {
     width: 70%;
     flex-wrap: nowrap;
+    padding: 0;
+    gap: 3rem;
   }
   .services-container .services .separator {
     display: none;
+  }
+  .services-container .services .service {
+    padding: 0;
   }
   .services-container .services .service .service-content .service-title {
     font-size: 1.6rem;

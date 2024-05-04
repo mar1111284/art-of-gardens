@@ -64,8 +64,10 @@
 
 @include respond(desktop)
     .services-container
+        gap: 5rem
         
         .services-section
+            padding: 1rem 0
             width: 70%
             h2
                 @include set-font(#075722, Poppins, 2.2rem, bold,normal)
@@ -80,11 +82,14 @@
         .services
             width: 70%
             flex-wrap: nowrap
+            padding: 0
+            gap: 3rem
 
             .separator
                 display: none
 
             .service
+                padding: 0
                 .service-content
                     .service-title
                         font-size: 1.6rem
