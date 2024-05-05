@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 // Import assets
 import Burger from '../assets/shared/menu_open.png';
 import Close from '../assets/shared/menu_close.png';
+import Logo from '../assets/shared/logo.png';
 
 const Navbar = () => {
 
@@ -62,7 +63,10 @@ const Navbar = () => {
       <div className={`background-layer ${navbarExpand ? "expand" : ""}`}></div>
 
       <div className='navbar'>
-        <h2 className='navbar-title'>Art of Gardens</h2>
+
+        <div className='logo-container'>
+          <img src={Logo} alt="Logo Art of Gardens" className='navbar-logo'></img>
+        </div>
 
 
         <div className={`links-container ${navbarExpand && screenWidth <= 480 ? "expand" : ""}`}>
@@ -78,18 +82,20 @@ const Navbar = () => {
             <div className={location.pathname === '/services' ? 'selector selected' : 'selector'}></div>
           </Link>
           <Link className='link' to="/contact"onClick={navbarExpand ? handleToggle : null}>
-            Contact
+            Contact Us
             <div className={location.pathname === '/contact' ? 'selector selected' : 'selector'}></div>
           </Link>
           <Link className='link' to="/about"onClick={navbarExpand ? handleToggle : null}>
-            About
+            About Us
             <div className={location.pathname === '/about' ? 'selector selected' : 'selector'}></div>
           </Link>
           <Link className='link' to="/blog"onClick={navbarExpand ? handleToggle : null}>
             Blog
             <div className={location.pathname === '/blog' ? 'selector selected' : 'selector'}></div>
           </Link>
+
         </div>
+
 
         <img src={!navbarExpand ? Burger: Close} alt="burger btn" className={`menu-btn ${navbarExpand ? "rotate" : ""}`} onClick={handleToggle}></img>
 

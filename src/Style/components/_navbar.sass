@@ -20,79 +20,72 @@
     // Navbar
     .navbar
         @include flexbox(column, flex-start, flex-start)
-        background-color: rgb(249, 246, 238)
+        background-color: $off-white
         box-shadow: 1px 8px 36px -6px rgba(0,0,0,0.25)
         min-height: 9rem
 
-
         .menu-btn
-            @include width-height(4rem, 4rem)
-            position: absolute
-            top: 2.25rem
-            right: 2.5rem
+            @include width-height(3rem, 3rem)
+            @include set-position(absolute, 3rem,2rem, unset, unset)
 
+        // Logo
+        .logo-container
+            @include width-height(auto, 9rem)
+            @include flexbox(row, flex-start, center)
 
-        .navbar-title
-            @include set-font(darkGreen,Roboto, 2rem, Bold,normal )
-            margin: 3rem 2rem
+            .navbar-logo
+                @include width-height(20rem, auto)
+                margin-left: 1rem
 
+        // Links container
         .links-container
             @include flexbox(column, space-between ,center)
-            width: 100%
+            @include width-height(100%,0)
             padding-left: 2rem
-            height: 0
             opacity: 0
             transition: height 0.3s ease
 
             .link
-                width: 100%
-                @include set-font(black,Roboto, 1.8rem, 300,normal )
-                height: 4rem
+                @include width-height(100%, 6rem)
+                @include set-font(black,Poppins, 2rem, 400,normal )
                 text-align: center
+
+                .selector
+                    display: none
+
         .expand
-            height: 20rem
+            height: 30rem
             opacity: 1
 .expand
     height: auto
 
 @include respond(tablet)
     .navbar-container
-        @include set-position(fixed,0,0)
-        @include width-height(100vw, 15rem)
-        z-index: 10
+        @include width-height(100vw, 15rem) // 15rem to display the box shadow
 
-        // Blurred overlaying background
+        // Blurred overlaying background undisplayed
         .background-layer
             display: none
 
         // Navbar
         .navbar
-            @include flexbox(row, space-between,center)
-            background-color: rgb(249, 246, 238)
-            box-shadow: 1px 8px 36px -6px rgba(0,0,0,0.25)
-            height: 9rem
+            @include flexbox(row, space-between,center) // from columns to row 
             padding: 0 6%
 
-            .menu-btn
+            .menu-btn // Hide btn
                 display: none
-
-            .navbar-title
-                @include set-font(darkGreen,Roboto, 2rem, Bold,normal )
-                margin: 3rem 2rem
 
             .links-container
                 @include flexbox(row, center,center, 2rem)
-                @include width-height(100%,100%)
+                @include width-height(auto,100%)
                 padding: 0
                 opacity: 1
-                width: auto
 
                 .link
-                    width: auto
+                    @include width-height(auto, 9rem)
                     @include flexbox(row, center,center)
-                    @include set-font(black,Roboto, 2rem, 300,normal )
-                    height: 100%
-                    position: relative
+                    position: relative // for the selector
+                    font-size: 1.6rem
 
                     // Black selector line below selected Link
                     .selector
@@ -105,50 +98,39 @@
                         display: block
 
 @include respond(desktop)
-    .navbar-container
-        @include set-position(fixed,0,0)
-        @include width-height(100vw, 9rem)
-        z-index: 10
 
-        // Blurred overlaying background
+    .navbar-container
+        @include width-height(100vw, 15rem) // 15rem to display the box shadow
+
+        // Blurred overlaying background undisplayed
         .background-layer
             display: none
 
         // Navbar
         .navbar
-            @include flexbox(row, space-between,center)
-            background-color: rgb(249, 246, 238)
-            box-shadow: 1px 8px 36px -6px rgba(0,0,0,0.25)
-            height: 9rem
+            @include flexbox(row, space-between,center) // from columns to row 
             padding: 0 15%
 
-            .menu-btn
+            .menu-btn // Hide btn
                 display: none
 
-            .navbar-title
-                @include set-font(darkGreen,Roboto, 2rem, Bold,normal )
-                margin: 3rem 2rem 3rem 0
-
             .links-container
-                @include flexbox(row, center,center, 2.5rem)
-                @include width-height(100%,100%)
+                @include flexbox(row, center,center, 2rem)
+                @include width-height(auto,100%)
                 padding: 0
                 opacity: 1
-                width: auto
 
                 .link
-                    width: auto
+                    @include width-height(auto, 9rem)
                     @include flexbox(row, center,center)
-                    @include set-font(black,Roboto, 1.8rem, 400,normal )
-                    height: 100%
-                    position: relative
+                    position: relative // for the selector
+                    font-size: 1.6rem
 
                     // Black selector line below selected Link
                     .selector
                         @include width-height(100%, 0.35rem)
                         @include set-position(absolute, undefined, undefined,0,0)
                         background-color: rgba(33,33,33, 0.7)
-
                         display: none
 
                     .selected

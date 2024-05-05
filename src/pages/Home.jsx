@@ -10,6 +10,7 @@ import FAQ from "../components/FAQ"
 import HeaderDesktop from '../assets/shared/header-desktop.webp'
 import HeaderTablet from '../assets/shared/header-tablet.webp'
 import HeaderMobile from '../assets/shared/header-mobile.webp'
+import ContactForm from "../components/ContactForm"
 
 
 const Home = () => {
@@ -51,9 +52,13 @@ const Home = () => {
                 <div className="home-header-content">
                     <p className="home-title">Professional Landscaping Services in Northern Sydney</p>
                     <p className="home-subtitle">Landscaping design is much more than simply planting a few trees and shrubs around your property</p>
-                    <Link  to="/services" className="learn-more link">Learn more</Link>                    
-                </div>
 
+                    <div className="button-container">
+                        <Link  to="/services" className="learn-more link">Learn more</Link>     
+                        <p>or</p>
+                        <Link  to="/contact" className="book-consultation link">Book a free consultation</Link>                 
+                    </div>
+                </div>
             </div>
 
             <div className="home-description">
@@ -100,8 +105,13 @@ const Home = () => {
                 </div>
 
             </section>
-
-            <FAQ/>
+            
+            <section className="questions-section"> 
+                <div className="questions-section-container">
+                    <FAQ/>
+                </div>
+                <div className="questions-section-container"><ContactForm/></div>
+            </section>
         </div>
     )
   }

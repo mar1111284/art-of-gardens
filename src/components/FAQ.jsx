@@ -16,7 +16,7 @@ const FAQ = () => {
     },
     {
       question: "Will I have the same gardener every time?",
-      answer: "We strive to provide consistency in service. While we cannot guarantee the same gardener every time due to scheduling and availability, we make every effort to assign the same professional to your garden whenever possible. Rest assured, all our gardeners are trained and experienced to meet our quality standards."
+      answer: "We aim for consistent service quality. Although we can't promise the same gardener for every visit due to scheduling constraints, we prioritize assigning the same professional whenever feasible. Be assured, all our gardeners are trained and experienced to meet our high standards.",
     },
     {
       question: "What if I want to cancel?",

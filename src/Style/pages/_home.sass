@@ -6,7 +6,7 @@
     // Home - Header
     .home-header
         padding-top: 9rem
-        @include width-height(100vw, 70vh)
+        @include width-height(100vw, 80vh)
         @include flexbox(row, center,center)
         position: relative
 
@@ -32,16 +32,35 @@
                 text-align: center
                 letter-spacing: 0.15rem
                 line-height: 2.5rem
-            
-            // Learn more button
-            .learn-more
-                background-color: #33b249 // Button Green 
-                @include set-font(white,Roboto, 1.6rem, 400,normal )
-                box-shadow: 1px 8px 36px -6px rgba(0,0,0,0.45)
-                border-radius: 4px
-                padding: 1rem 1.5rem
-                cursor: pointer
-                letter-spacing: 0.2rem
+
+            .button-container
+                @include flexbox(column, center, center, 1rem)
+
+                p
+                    text-transform: uppercase
+                    @include set-font(white,Poppins, 2rem, bold,normal )
+                    letter-spacing: 0.2rem
+
+                // Learn more button
+                .learn-more
+                    background-color: #33b249 // Button Green 
+                    @include set-font(white,Poppins, 1.4rem, 400,normal )
+                    box-shadow: 1px 8px 36px -6px rgba(0,0,0,0.45)
+                    border-radius: 4px
+                    padding: 1.25rem 1.25rem
+                    cursor: pointer
+                    letter-spacing: 0.2rem
+
+                // booking button
+                .book-consultation
+                    // background-color: #33b249 // Button Green 
+                    background-color: #4681f4
+                    @include set-font(white,Poppins, 1.4rem, 400,normal )
+                    box-shadow: 1px 8px 36px -6px rgba(0,0,0,0.45)
+                    border-radius: 4px
+                    padding: 1.25rem 1.25rem
+                    cursor: pointer
+                    letter-spacing: 0.2rem
     
     // Home description
     .home-description
@@ -140,6 +159,12 @@
             @include set-background-image('../assets/shared/service3.webp', top, cover)
         #services-3
             @include set-background-image('../assets/shared/service2.webp', top, cover)
+    
+    .questions-section
+        @include flexbox(column, center, flex-start)
+
+        .questions-section-container
+            width: 100%
 
 
 
@@ -164,13 +189,20 @@
                     max-width: 58%
                     font-size: 1.8rem
 
-                // Learn more button
-                .learn-more
-                    @include set-font(white,Roboto, 1.8rem, 400,normal )
-                    padding: 1.5rem 2.5rem
-                    letter-spacing: 0.15rem
 
+                .button-container
+                    @include flexbox(row, center, center, 2rem)
 
+                    // Learn more button
+                    .learn-more
+                        @include set-font(white,Poppins, 1.6rem, 400,normal )
+                        padding: 1rem 2rem
+                        letter-spacing: 0.15rem
+
+                    .book-consultation
+                        @include set-font(white,Poppins, 1.6rem, 400,normal )
+                        padding: 1rem 2rem
+                        letter-spacing: 0.15rem
         // Home description
         .home-description
             max-width: 70%
@@ -257,12 +289,20 @@
                     font-size: 2rem
                     line-height: 3rem
 
+                .button-container
+                    @include flexbox(row, center, center, 2rem)
 
-                // Learn more button
-                .learn-more
-                    @include set-font(white,Roboto, 1.8rem, 400,normal )
-                    padding: 1.5rem 2.5rem
-                    letter-spacing: 0.15rem
+                    // Learn more button
+                    .learn-more
+                        @include set-font(white,Poppins, 1.8rem, 400,normal )
+                        padding: 1.5rem 2.5rem
+                        letter-spacing: 0.15rem
+
+                    .book-consultation
+                        @include set-font(white,Poppins, 1.8rem, 400,normal )
+                        padding: 1.5rem 2.5rem
+                        letter-spacing: 0.15rem
+
 
 
         // Home description
@@ -325,3 +365,7 @@
 
                 .services-link
                     @include set-font(#17d330 ,Poppins, 2.2rem, bold,normal )
+
+
+        .questions-section
+            @include flexbox(row, center, flex-start, 6rem)

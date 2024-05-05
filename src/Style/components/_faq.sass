@@ -1,9 +1,9 @@
 .faq-container
-    @include width-height(100%, 100%)
+    @include width-height(auto, 100%)
     @include flexbox(column, flex-start, center, 1.5rem)
     max-width: 60rem
-    min-height: 70vh
-    padding: 2rem 2rem 8rem
+    // min-height: 55rem
+    padding: 2rem 2rem 2rem
     
     .faq-title
         @include set-font(#075722, Poppins, 2.2rem, bold,normal)
@@ -51,7 +51,7 @@
 @include respond(tablet)
     .faq-container
         max-width: 65rem
-        min-height: 57vh
+        min-height: 48vh
 
 @include respond(desktop)
     .faq-container
