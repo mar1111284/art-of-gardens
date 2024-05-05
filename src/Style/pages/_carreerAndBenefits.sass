@@ -1,0 +1,72 @@
+.carreerAndBenefits-container
+    @include flexbox(column, center,flex-start, 2rem)
+    min-height: 100vh
+    padding: 10rem 2rem
+
+    .profil-container
+        width: 100%
+        @include flexbox(column, center, center, 1rem)
+        .ceo-image
+            @include width-height(20rem, 20rem)
+            border-radius: 50%
+
+
+    h2
+        @include set-font(#075722, Poppins, 1.8rem, bold,normal)
+
+    h3
+        @include set-font(black, Poppins, 1.6rem, bold,normal)
+    h4
+        @include set-font(#075722, Poppins, 1.4rem, bold,normal)
+    p
+        @include set-font(black, Poppins, 1.5rem, 400,normal)
+        letter-spacing: 0.08rem
+
+    ul
+        @include flexbox(column, center, center, 2rem)
+        li
+            @include set-font(black, Poppins, 1.5rem, 400,normal)
+            letter-spacing: 0.08rem
+
+
+
+@include respond(tablet)
+    .carreerAndBenefits-container
+        padding: 14rem 10rem
+        gap: 2rem
+
+        .ceo-image
+            margin-top: 2rem
+
+        h2
+            @include set-font(#075722, Poppins, 2.5rem, bold,normal)
+
+        h3
+            margin-top: 2rem
+            @include set-font(black, Poppins, 2rem, 400,normal)
+        p
+            @include set-font(black, Poppins, 1.8rem, 400,normal)
+
+        ul
+            @include flexbox(column, center, center, 2rem)
+            li
+                @include set-font(black, Poppins, 1.8rem, 400,normal)
+                letter-spacing: 0.08rem
+
+@include respond(desktop)
+    .carreerAndBenefits-container
+        padding: 14rem 20rem
+        gap: 2rem
+
+        .ceo-image
+            margin-top: 5rem
+            @include width-height(25rem,25rem)
+
+        h2
+            @include set-font(#075722, Poppins, 2.2rem, bold,normal)
+
+        h3
+            margin-top: 2rem
+            @include set-font(black, Poppins, 2rem, 400,normal)
+        p
+            @include set-font(black, Poppins, 1.4rem, 400,normal)

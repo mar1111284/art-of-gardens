@@ -27,10 +27,10 @@ const Footer = () => {
                     <Link to="/privacy" className="footer-link">Policy & Support</Link>
                     <Link className="footer-link">Gallery</Link>
                     <Link  to="/blog" className="footer-link">Blog</Link>
-                    <Link className="footer-link">Carreer & Benefits</Link>
+                    <Link to="/carreer"className="footer-link">Carreer & Benefits</Link>
                     <Link className="footer-link">FAQ</Link>
-                    <Link className="footer-link">About Us</Link>
-                    <Link className="footer-link">Contact Us</Link>
+                    <Link to="/about" className="footer-link">About Us</Link>
+                    <Link to="/contact"className="footer-link">Contact Us</Link>
                 </div>
             </div>
             <div className="footer-content">

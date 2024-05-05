@@ -18,6 +18,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import PrivacyAndSupport from "./pages/PrivacyAndSupport";
+import CarreerAndBenefits from "./pages/CarreerAndBenefits";
 
 const options = {
   basename: "/art-of-gardens",
@@ -64,6 +65,10 @@ const routes = [
       {
         path: "/privacy",
         element: <PrivacyAndSupport />,
+      },
+      {
+        path: "/carreer",
+        element: <CarreerAndBenefits/>,
       },
     ],
   },

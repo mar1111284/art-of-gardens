@@ -162,9 +162,12 @@
     
     .questions-section
         @include flexbox(column, center, flex-start)
+        max-width: 80%
 
         .questions-section-container
             width: 100%
+            @include flexbox(row, center, flex-start)
+
 
 
 
@@ -368,4 +371,5 @@
 
 
         .questions-section
+            width: 100%
             @include flexbox(row, center, flex-start, 6rem)
