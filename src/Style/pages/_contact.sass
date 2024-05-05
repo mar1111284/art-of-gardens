@@ -41,7 +41,38 @@
         p
             margin-top: 1rem
             @include set-font(black, Poppins, 1.4rem, 400,normal)
+            max-width: 50rem
 
+@include respond(tablet)
+    .contact-page-container
+
+        .background-shape
+
+            .info-container
+                @include width-height(100%, 5rem)
+                @include flexbox (row, flex-start, center, 1.5rem)
+                z-index: 2
+
+                .footer-icon
+                    @include width-height(2.5rem,2.5rem)
+                p
+                    @include set-font(white, Poppins, 1.3rem, 400,normal)
+            
+            .profil-container
+                display: none
+
+        
+        .contact-page-right-container
+            width: 100%
+            margin-top: 25rem
+            padding: 5rem
+            h2
+                @include set-font(#075722, Poppins, 2.2rem, bold,normal)
+            h3
+                @include set-font(black, Poppins, 1.4rem, bold,normal)
+            p
+                margin-top: 1rem
+                @include set-font(black, Poppins, 1.4rem, 400,normal)
 
 @include respond(desktop)
     .contact-page-container
@@ -86,6 +117,7 @@
         .contact-page-right-container
             margin-top: 0
             width: 50%
+            padding-right: 12rem
             h2
                 @include set-font(#075722, Poppins, 2.2rem, bold,normal)
             h3
