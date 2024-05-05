@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/art-of-gardens/static/css/main.9a899cf3.css",
-    "main.js": "/art-of-gardens/static/js/main.7a4dd83b.js",
+    "main.css": "/art-of-gardens/static/css/main.f45e11ce.css",
+    "main.js": "/art-of-gardens/static/js/main.d4a1d6e6.js",
     "static/js/453.b09cdf09.chunk.js": "/art-of-gardens/static/js/453.b09cdf09.chunk.js",
     "static/media/header-desktop.webp": "/art-of-gardens/static/media/header-desktop.ff8fbe743d357b698c01.webp",
     "static/media/header-tablet.webp": "/art-of-gardens/static/media/header-tablet.6489e88c5902f102c484.webp",
+    "static/media/ceo.jpeg": "/art-of-gardens/static/media/ceo.2886d057ab6f39447611.jpeg",
     "static/media/header-mobile.webp": "/art-of-gardens/static/media/header-mobile.4f1080a0cd4252cdcb1f.webp",
     "static/media/leaf-pattern.jpg": "/art-of-gardens/static/media/leaf-pattern.0d1fb359859ebbd360b6.jpg",
     "static/media/service1.webp": "/art-of-gardens/static/media/service1.bb6586828f64e125cc69.webp",
@@ -12,12 +13,12 @@
     "static/media/service3.webp": "/art-of-gardens/static/media/service3.e39bedbfc9149fd9cd1d.webp",
     "static/media/service2.webp": "/art-of-gardens/static/media/service2.c2d0e32b1b5d7b6972d8.webp",
     "index.html": "/art-of-gardens/index.html",
-    "main.9a899cf3.css.map": "/art-of-gardens/static/css/main.9a899cf3.css.map",
-    "main.7a4dd83b.js.map": "/art-of-gardens/static/js/main.7a4dd83b.js.map",
+    "main.f45e11ce.css.map": "/art-of-gardens/static/css/main.f45e11ce.css.map",
+    "main.d4a1d6e6.js.map": "/art-of-gardens/static/js/main.d4a1d6e6.js.map",
     "453.b09cdf09.chunk.js.map": "/art-of-gardens/static/js/453.b09cdf09.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a899cf3.css",
-    "static/js/main.7a4dd83b.js"
+    "static/css/main.f45e11ce.css",
+    "static/js/main.d4a1d6e6.js"
   ]
 }
